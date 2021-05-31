@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .top {
+            text-align: center;
+        }
+        .mom {overflow: hidden;}
+        .middle {
+            float: left;
+        }
+        .write {
+            border: 1px solid black;
+            display: inline-block;
+        }
+
+        
+    </style>
+    
+</head>
+<body>
+    <form>
+        <div class="top">
+
+            <h3 id="title">style속성 활용하기</h3>
+        
+            <button type="button" id="dark">어둡게</button>
+            <button type="button" id="white">밝게</button>
+        </div>
+    <hr/>
+    <div class="mom">
+        <div class="middle">
+
+            <img src="img/1.jpg" width="20%" height="400">
+            <div id="write">
+                <p>자바스크립트는 객체 기반의 스크립트 프로그래밍 언어이다. 이 언어는 웹 브라우저 내에서 주로 사용하며, 다른 응용 프로그램의 내장 객체에도 접근 할 수 있는 기능을 가지고 있다. 또한 Node.js와 같은 런타임 환경과 같이 서버 사이드 네트워크 프로그래밍에도 사용되고 있다.</p>
+                <br/>
+                <p id="source">위키백과</p>    
+            </div>
+        </div>
+    </div>
+
+    </form>
+    
+    <script>
+        
+        var dark = document.getElementById("dark");
+        var white = document.getElementById("white");
+        var body = document.querySelector("body");
+        var h3 = document.querySelector("h3");
+        var p = document.querySelector("p");
+        var source = document.getElementById("source");
+
+        dark.onclick = function() {
+            body.style.backgroundColor = "black";
+            h3.style.color = "white";
+            p.style.color = "white";
+            source.style.color = "white";
+            source.style.borderBottom = "3px solid white";
+        }
+
+        white.onclick = function() {
+            body.style.backgroundColor = "white";
+            h3.style.color = "black";
+            p.style.color = "black";
+            source.style.color = "black";
+            source.style.borderBottom = "3px solid black";
+        }
+    </script>
+</body>
+</html>
