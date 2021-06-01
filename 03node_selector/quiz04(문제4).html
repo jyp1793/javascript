@@ -10,58 +10,69 @@
         .top {
             text-align: center;
         }
-        .mom {overflow: hidden;}
-        .middle {
+        .content {width: 70%; margin: 0 auto; border: 1px solid #777; overflow: hidden;}
+        .left {
+            width: 50%;
             float: left;
+            box-sizing: border-box;
         }
-        .write {
-            border: 1px solid black;
-            display: inline-block;
+        .content, .left { padding: 5px;}
+        .inner {border: 1px solid #777; height: 300px;}
+        .inner p {
+            overflow: auto;
         }
-
+        .inner > .source2 {text-decoration: underline;}
         
     </style>
     
 </head>
 <body>
-    <form>
+    <header>
         <div class="top">
-
             <h3 id="title">style속성 활용하기</h3>
-        
             <button type="button" id="dark">어둡게</button>
             <button type="button" id="white">밝게</button>
         </div>
     <hr/>
-    <div class="mom">
-        <div class="middle">
+</header>
 
-            <img src="img/1.jpg" width="20%" height="400">
-            <div id="write">
-                <p>자바스크립트는 객체 기반의 스크립트 프로그래밍 언어이다. 이 언어는 웹 브라우저 내에서 주로 사용하며, 다른 응용 프로그램의 내장 객체에도 접근 할 수 있는 기능을 가지고 있다. 또한 Node.js와 같은 런타임 환경과 같이 서버 사이드 네트워크 프로그래밍에도 사용되고 있다.</p>
+<section>
+    <div class="content">
+        <div class="left">
+            <div class="inner">
+                <img src="img/1.jpg" width="100%" height="100%">
+            </div>
+        </div>
+        <div class="left">
+            <div class="inner">
+                <p>자바스크립트는 객체 기반의 스크립트 프로그래밍 언어이다. 이 언어는 웹 브라우저 내에서 주로 사용하며, 다른 응용 프로그램의 내장 객체에도 접근 할 수 있는 기능을 가지고 있다. 또한
+                    Node.js와 같은 런타임 환경과 같이 서버 사이드 네트워크 프로그래밍에도 사용되고 있다.</p>
                 <br/>
-                <p id="source">위키백과</p>    
+                <p id="source" class="source2">위키백과</p>
             </div>
         </div>
     </div>
 
-    </form>
-    
-    <script>
+</section>
+<script>
         
         var dark = document.getElementById("dark");
         var white = document.getElementById("white");
-        var body = document.querySelector("body");
+        // var body = document.querySelector("body");
+        var body = document.body; //body가 document의 자식
         var h3 = document.querySelector("h3");
         var p = document.querySelector("p");
+        var all = document.querySelectorAll("h3, p");
         var source = document.getElementById("source");
 
         dark.onclick = function() {
             body.style.backgroundColor = "black";
-            h3.style.color = "white";
-            p.style.color = "white";
+            // h3.style.color = "white";
+            // p.style.color = "white";
+            all[0].style.color = "white";
+            all[1].style.color = "white";
             source.style.color = "white";
-            source.style.borderBottom = "3px solid white";
+            source.style.textDecoration = "underline white";
         }
 
         white.onclick = function() {
@@ -69,7 +80,7 @@
             h3.style.color = "black";
             p.style.color = "black";
             source.style.color = "black";
-            source.style.borderBottom = "3px solid black";
+            source.style.textDecoration = "underline black";
         }
     </script>
 </body>

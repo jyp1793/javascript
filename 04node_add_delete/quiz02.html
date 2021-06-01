@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <h2>할일 목록 만들기</h2>
+
+    <input type="text" id="name">
+    <button type="button" id="add1">확인</button>
+    <p id="write"></p>
+    <br/>
+    <input type="text">
+    <button type="button" id="add2">확인</button>
+
+    <script>
+
+        var add1 = document.getElementById("add1");
+        add1.onclick = function() {
+            var name = document.getElementById("name");
+            name.style.display = "none";
+            add1.style.display = "none";
+            var text = document.createTextNode(name + "님 안녕하세요.");
+            var p = document.getElementById("write");
+            console.log(p.appendChild(text));
+
+        }
+
+    </script>
+</body>
+</html>
