@@ -12,7 +12,7 @@
 
     </div>
 
-    <div id="inner2">
+    <div id="inner2"> 
         <ul>
             <li></li>
             <li></li>
@@ -33,7 +33,7 @@
         //innerHTML1
         var inner1 = document.getElementById("inner1");
         var btn1 = document.getElementById("btn1");
-        btn1.onclick = function() {
+        btn1.onclick = function() { 
 
             inner1.innerHTML = "<b>버튼클릭시 문자열의 방식으로 요소를 생성</b>";
         }
@@ -44,25 +44,34 @@
         btn2.onclick = function() {
             
             var list = inner2.querySelectorAll("ul > li");
-            for(var a = 0; a < list.length; a++) {
-                list[a].innerHTML = "이렇게 한번에 추가하기";
+            
+            for(var i = 0; i < list.length; i++) {
+                list[i].innerHTML = "이렇게 한번에 추가하기";
             }
 
         }
-
+        //innerHTML3
         var inner3 = document.getElementById("inner3");
         var btn3 = document.getElementById("btn3");
 
         var str = ""; //공백
         btn3.onclick = function() {
 
-            str += "<input type='checkbox' name='add'>";
+            str += "<input type='checkbox' name='add' >";
             inner3.innerHTML = str;
+
         }
 
 
+
+
+
+
     </script>
-    
+
+
+
+
 
 </body>
 </html>

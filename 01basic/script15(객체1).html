@@ -10,8 +10,7 @@
     
     <script>
         var person = {name: '홍길동', age: 20, arr:[1,2,3,4]};
-
-        // JS의 객체에 접근하는 방법.
+        //JS에 객체에 접근하는 방법 .
         console.log(person);
         console.log(person.name);
         console.log(person.age);
@@ -19,73 +18,83 @@
         console.log(person.arr[1]);
         console.log(person.arr[2]);
         console.log(person.arr[3]);
-
-        // JS의 객체에 접근하는 방법2. ["키"]
-
-        console.log(person["name"]);
-        console.log(person["age"]);
-        console.log(person["arr"][0]);
-        console.log(person["arr"][1]);
-        console.log(person["arr"][2]);
-        console.log(person["arr"][3]);
+       
+        //JS에 객체에 접근하는 방법2  ["키"]
+        console.log(person["name"] );
+        console.log(person["age"] );
+        console.log(person["arr"][0] );
+        console.log(person["arr"][1] );
+        console.log(person["arr"][2] );
+        console.log(person["arr"][3] );
         
-        console.log("----------------------------------------")
+        console.log("----------------------------------")
         var exam = {kor: 80, eng: 60, math: 90};
         var hong = {name: '홍길동', exam: exam};
-        
-
         //1st
-        console.log(hong.name);
-        console.log(hong.exam);
-        console.log(hong.exam.kor);
-        console.log(hong.exam.math);
+        console.log(hong.name );
+        console.log(hong.exam );
+        console.log(hong.exam.kor );
+        console.log(hong.exam.math );
         //2nd
         console.log(hong["name"]);
         console.log(hong["exam"]);
-        console.log(hong["exam"]["kor"]);
-        console.log(hong["exam"]["math"]);
+        console.log(hong["exam"]["kor"] );
+        console.log(hong["exam"]["math"] );
 
         //중첩포문으로 subject에 있는 값을 전부 출력하세요.
         var list = [
             {
-            name: "홍길동",
-            age: 20,
-            subject: ["java", "jsp", "js"],
-            birth: 20210526
-        },
-        {
-            name: "이순신",
-            age: 30,
-            subject: ["css", "DB"],
-            birth: 20210527
-        }
-    ];
-
-        // console.log(list[0].subject[0])
-        // console.log(list[0].subject[1])
-        // console.log(list[0].subject[2])
-        // console.log(list[1].subject[0])
-        // console.log(list[1].subject[1])
-        
-        for(var a = 0; a < list.length; a++) {
-            for(var b = 0; b < list[a].subject.length; b++) {
-                console.log(list[a].subject[b]);
+                name: "홍길동",
+                age: 20,
+                subject: ["java", "jsp", "js"],
+                birth: 20210526
+            }, 
+            {
+                name: "이순신",
+                age: 30,
+                subject: ["css", "DB"],
+                birth: 20210527
             }
+        ];
+
+        // console.log(list[0].subject[0] )
+        // console.log(list[0].subject[1] )
+        // console.log(list[0].subject[2] )
+        // console.log(list[1].subject[0] )
+        // console.log(list[1].subject[1] )
+
+        for(var i = 0; i < list.length; i++) {
+            for(var j = 0; j < list[i].subject.length ; j++ ) {
+                console.log(list[i].subject[j]);
+            }
+
         }
 
         //함수를 가지고 있는 객체
         var obj = {
-            age:10,
+            age:10, 
             func: function() {
                 console.log("func");
             }
         }
 
-        console.log(obj.age);
+        console.log(obj.age );
         obj.func();
 
 
 
+
+
+
+
+
+
+
+
+
+
     </script>
+
+
 </body>
 </html>

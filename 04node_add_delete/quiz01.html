@@ -9,9 +9,10 @@
     <style>
         table {border-spacing: 0; border-collapse: collapse;}
         thead th {
-            border: 1px solid black;
+            border: 1px solid #777;
         }
     </style>
+
 </head>
 <body>
     
@@ -29,20 +30,21 @@
                 <td><input type="text" size="3"></td>
                 <td><input type="text" ></td>
                 <td><input type="text" size="5"></td>
-                <td><input type="text"></td>
+                <td><input type="text" ></td>
             </tr>
         </tbody>
     </table>
-    <button type="button" id="add5">5개추가</button>
-    <button type="button" id="add1">1개추가</button>
+
+    <button type="button" id="addList">1개추가하기</button>
+    <button type="button" id="addLists">5개추가하기</button>
 
     <script>
 
-        var tableList = document.querySelector(".tableList");
-    
-        var add1 = document.getElementById("add1");
-        add1.onclick = function() {
-            
+        var tableList = document.querySelector(".tableList"); //tbody
+
+        var addList = document.getElementById("addList")
+        addList.onclick = function() {
+
             var tr = document.createElement("tr");
 
             var td = document.createElement("td");
@@ -60,37 +62,46 @@
             var td = document.createElement("td");
             td.innerHTML = '<input type="text">';
             tr.appendChild(td);
-            
-            tableList.appendChild(tr);
-            
+
+            tableList.appendChild(tr); //tbody의 자식으로 tr을 추가            
+
         }
 
-        var add5 = document.getElementById("add5");
-        add5.onclick = function() {
+        //5개 버튼 이벤트
+        var addLists = document.getElementById("addLists");
+        addLists.onclick = function() {
 
-            for(var a = 1; a <= 5; a++) {
+            for(var i = 1; i <= 5; i++) {
                 var tr = document.createElement("tr");
 
-            var td = document.createElement("td");
-            td.innerHTML = '<input type="text" size="3">';
-            tr.appendChild(td);
+                var td = document.createElement("td");
+                td.innerHTML = '<input type="text" size="3">';
+                tr.appendChild(td);
 
-            var td = document.createElement("td");
-            td.innerHTML = '<input type="text">';
-            tr.appendChild(td);
+                var td = document.createElement("td");
+                td.innerHTML = '<input type="text">';
+                tr.appendChild(td);
 
-            var td = document.createElement("td");
-            td.innerHTML = '<input type="text" size="5">';
-            tr.appendChild(td);
+                var td = document.createElement("td");
+                td.innerHTML = '<input type="text" size="5">';
+                tr.appendChild(td);
 
-            var td = document.createElement("td");
-            td.innerHTML = '<input type="text">';
-            tr.appendChild(td);
-            
-            tableList.appendChild(tr);
+                var td = document.createElement("td");
+                td.innerHTML = '<input type="text">';
+                tr.appendChild(td);
+
+                tableList.appendChild(tr); //tbody의 자식으로 tr을 추가            
+
             }
+
         }
 
+
+
     </script>
+
+
+
+
 </body>
 </html>

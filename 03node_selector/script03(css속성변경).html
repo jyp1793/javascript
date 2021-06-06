@@ -19,25 +19,32 @@
     </div>
     <button type="button" id="btn">색상과 배경색 변경하기</button>
 
-
     <script>
         var btn = document.getElementById("btn");
         btn.addEventListener("click", function() {
 
             var lis = document.querySelectorAll(".box > li");
-
+            
             for(var i = 0; i < lis.length; i++) {
                 lis[i].style.color = "#FF0000";
                 lis[i].style.backgroundColor = "blue";
             }
+
             // lis[0].style.color = "#FF0000";
             // lis[1].style.color = "#FF0000";
             // lis[2].style.color = "#FF0000";
 
-            // lis[0].style.backgroundColor = "blue"; //background-color처럼 -이 들어간 속성은 카멜표기법으로
+            // lis[0].style.backgroundColor = "blue"; //background-color처럼 -이 들어간 속성은 카멜표기법으로 대체
             // lis[1].style.backgroundColor = "blue";
             // lis[2].style.backgroundColor = "blue";
+
+
+
+
         });
+
     </script>
+
+
 </body>
 </html>

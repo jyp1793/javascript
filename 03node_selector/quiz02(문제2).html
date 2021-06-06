@@ -7,8 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    
-    <!-- 비밀번호 or 아이디가 변경될 때 마다 예시화면처럼 구현하세요 -->
+
+    <!-- 비밀번호 or 아이디가 변경될때 마다 예시화면처럼 구현하세요 -->
     <!-- border-color속성과 innerHTML으로 처리 -->
     <section>
         <form>
@@ -19,41 +19,41 @@
             <label>비밀번호</label>
             <input type="password" name="pw" id="pw"><br/>
             <span class="pwMsg"></span><br/>
-
-        
-
         </form>
     </section>
 
     <script>
+        var idMsg = document.querySelector(".idMsg");
         var id = document.getElementById("id");
+        id.onkeyup = function() {
+
+            if(id.value.length  < 4) {
+                id.style.borderColor = "red";
+                idMsg.innerHTML = "아이디는 4글자 이상입니다";
+            } else {
+                id.style.borderColor = "green";
+                idMsg.innerHTML = "";
+            }
+        }
+
+        //
+        var pwMsg = document.querySelector(".pwMsg");
         var pw = document.getElementById("pw");
-        var idMsg = document.querySelectorAll(".idMsg");
-        var pwMsg = document.querySelectorAll(".pwMsg");
-
-
-            id.onkeyup = function () {
-
-                if (id.value.length < 4) {
-                    id.style.borderColor = "#FF0000";
-                    idMsg.innerHTML = "아이디는 4글자 이상입니다";
-                } else {
-                    id.style.borderColor = "green";
-                    idMsg.innerHTML = "";
-                }
+        pw.onkeyup = function() {
+            if(pw.value.length < 8) {
+                pw.style.borderColor = "red";
+                pwMsg.innerHTML = "비밀번호는 8글자 이상입니다";
+            } else {
+                pw.style.borderColor = "green";
+                pwMsg.innerHTML = "";
             }
-        
-            pw.onkeyup = function () {
+        }
 
-                if (pw.value.length < 9) {
-                    pw.style.borderColor = "#FF0000";
-                    pwMsg.innerHTML = "비밀번호는 9글자 이상입니다";
-                } else {
-                    pw.style.borderColor = "green";
-                    idMsg.innerHTML = "";
-                }
-            }
 
     </script>
+    
+
+
+
 </body>
 </html>

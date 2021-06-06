@@ -9,13 +9,14 @@
 <body>
     
     <script>
-        // 함수를 이용한 객체 선언
+        //함수를 이용한 객체 선언
         function Person(name) {
+
             this.name = name;
+
             this.info = function() {
                 return "이름:" + name;
             }
-
         }
 
         var p = new Person("홍길자");
@@ -24,7 +25,9 @@
 
         var p2 = new Person("이순신");
         console.log(p2.name);
-        console.log(p2.info());
+        console.log(p2.info() );
+
     </script>
+
 </body>
 </html>

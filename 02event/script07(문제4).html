@@ -8,18 +8,19 @@
 </head>
 <body>
     
-    <h3>자바스크립트 카운트</h3>
+    <h3>자바스크립트 카운트(인라인방식으로 하나의함수 처리)</h3>
 
-    <input type="number" value="0" id="result" readonly>
+    <!-- <input type="number" value="0" id="result"> -->
 
-    <button type="button" onclick="calc(this);">+</button>
-    <button type="button" onclick="calc(this);">-</button>
+    <input type="text" value="0" id="result" readonly>
+
+    <button type="button" onclick="calc(this);" >+</button>
+    <button type="button" onclick="calc(this);" >-</button>
 
     <script>
         var result = document.getElementById("result");
         function calc(oper) {
             // console.log(oper.innerHTML);
-
             if(oper.innerHTML == "+") {
                 result.value++;
             } else {
@@ -30,6 +31,10 @@
                 result.value--;
             }
         }
+
     </script>
+
+
+
 </body>
 </html>

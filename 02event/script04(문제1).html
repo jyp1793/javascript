@@ -7,30 +7,31 @@
     <title>Document</title>
 </head>
 <body>
-    
-    <!-- 1. 아래 checkbox버튼을 클릭했을 때, "동의했습니다" 경고창을 띄우고 value값을 확인 -->
-    <input type="checkbox" value="1" onclick="check(this);">조항1
-    <input type="checkbox" value="2" onclick="check(this);">조항2
-    <input type="checkbox" value="3" onclick="check(this);">조항3
-    <input type="checkbox" value="4" onclick="check(this);">조항4
+    <!-- 1. 아래 checkbox버튼을 클릭했을 때, "동의했습니다" 경고창을 띄우고 value값을 확인 inline -->
+    <input type="checkbox" value="1" onclick="check(this);" >조항1
+    <input type="checkbox" value="2" onclick="check(this);" >조항2
+    <input type="checkbox" value="3" onclick="check(this);" >조항3
+    <input type="checkbox" value="4" onclick="check(this);"  >조항4
+
+    <script>
+
+        function check(a) {
+            console.log(a);
+            console.log(a.value);
+
+            alert(a.value + "약관에 동의했습니다.");
+        }
+
+    </script>
+
 
     <hr>
-    <!-- 확인을 클릭했을 때 input태그의 공백여부, 기억하기의 체크여부 확인 -->
+    <!-- 2. 확인을 클릭했을때 input태그의 공백여부,  기억하기의 체크여부 확인하세요 -->
     ID:<input type="text" id="id">
     기억하기:<input type="checkbox" id="remember">
     <button type="button" id="check">확인</button>
 
-    <script>
-       function check(a) {
-           console.log(a);
-           console.log(a.value);
 
-           alert("동의했습니다.");
-       }
-
-    </script>
-
-        
     <script>
         var id = document.getElementById("id");
         var remember = document.getElementById("remember");
@@ -41,6 +42,10 @@
             console.log("id값의 여부:" + id.value);
             console.log("check여부:" + remember.checked);
         }
+
+
     </script>
+
+
 </body>
 </html>

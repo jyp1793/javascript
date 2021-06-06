@@ -11,18 +11,25 @@
     <button type="button" id="bt">표준이벤트버튼</button>
 
     <script>
-        // addEventListener의 매개변수("이벤트의종류", 실행시킬함수)
+        /* addEventListener의 매개변수("이벤트의종류", 실행시킬함수) */
         var bt = document.getElementById("bt");
+        // 1st
         // bt.addEventListener("click", test);
-
         // function test() {
         //     console.log("표준이벤트!");
         // }
-
-        //2nd
+        
+        //2nd - 동일한 이벤트에 대해서 여러개 등록이 가능함
         bt.addEventListener("click", function() {
             console.log("표준이벤트");
         });
+
+        bt.addEventListener("click", function() {
+            console.log("표준이벤트2");
+        });
+
+
+
     </script>
 </body>
 </html>

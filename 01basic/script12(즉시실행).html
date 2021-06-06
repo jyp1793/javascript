@@ -9,31 +9,35 @@
 <body>
     
     <script>
-        // 즉시실행함수
+        /* 즉시실행함수 */
         // (function() {
-            // alert("즉시실행");
+        //     alert("즉시실행");
         // })();
-
-        // 즉시실행함수의 매개변수
+        
+        /* 즉시실행함수의 매개변수 */
         // (function(a, b, c) {
         //     console.log(a, b, c);
         // })('a', 1, 2);
 
+
         function func1() {
-            console.log('1번')
+            console.log('1번11');
             return '1번';
         }
 
         function func2() {
-            console.log('2번')
+            console.log('2번');
         }
 
-        // 사용이유 - 페이지에서 실행되는 초기값을 지정하거나, 초기에 순서대로 실행할 함수들을 정의 하기위해
+        //사용이유 - 페이지에서 실행되는 초기값을 지정하거나, 초기에 순서대로 실행할 함수들을 정의 하기위해
         (function () {
+
             var result = func1();
             func2(result);
+
         })();
 
     </script>
+
 </body>
 </html>
