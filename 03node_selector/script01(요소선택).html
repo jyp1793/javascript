@@ -38,10 +38,10 @@
     <script>
         //btn1을 눌렀을 때 name이 inter인 태그를 전부 선택 
         var btn1 = document.getElementById("btn1");
-        var inter = document.getElementsByName("inter"); //name이 inter인 요소들 선택(다중)
-        btn1.onclick = function() {
+var inter = document.getElementsByName("inter"); //name이 inter인 요소들 선택(다중)
+btn1.onclick = function() {
     
-        for(var i = 0; i < inter.length; i++) {
+    for(var i = 0; i < inter.length; i++) {
        
         console.log(inter[i].value); //배열안에 요소의 값.
         console.log(inter[i].checked); //배열안의 요소의 체크여부.
@@ -50,16 +50,16 @@
 
 }
 
-    //btn2를 눌렀을 때 class이 test인 태그를 전부 선택
-    var btn2 = document.getElementById("btn2");
-    var test = document.getElementsByClassName("test");
-    btn2.onclick = function () {
-        for (var i = 0; i < test.length; i++) {
-            console.log(test[i].value);
-            console.log(test[i].checked);
-        }
-
+//btn2를 눌렀을 때 class이 test인 태그를 전부 선택
+var btn2 = document.getElementById("btn2");
+var test = document.getElementsByClassName("test");
+btn2.onclick = function() {
+    for(var i = 0; i < test.length; i++) {
+        console.log(test[i].value);
+        console.log(test[i].checked);
     }
+
+}
 
     </script>
     <script>

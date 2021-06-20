@@ -12,25 +12,22 @@
 
     <script>
         //일정시간마다 반복실행 - (실행함수, 인터벌시간)
-        
         var stop = setInterval( function() {
             console.log(1);
-        }, 1000);        
-        
-        // setInterval( aa(), 1000);
+        }, 1000);
 
         // function aa() {
         //     console.log(1);
         // }
 
-            
+        var stopInterval = document.querySelector(".stopInterval");
+        stopInterval.onclick = function() {
+            //clearInterval(중지할인터벌함수)
+            clearInterval(stop);
+        }
 
-            var stopInterval = document.querySelector(".stopInterval");
-            stopInterval.onclick = function() {
-                // clearInterval(중지할인터벌함수)
-                clearInterval(stop);
-            }
-
+        
     </script>
+    
 </body>
 </html>
